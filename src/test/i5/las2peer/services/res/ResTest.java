@@ -96,7 +96,7 @@ public class ResTest {
     
         
     try {
-      ClientResponse result = c.sendRequest("GET", mainPath + "/req", "");
+      ClientResponse result = c.sendRequest("GET", mainPath + "/test", "");
           Object response = JSONValue.parse(result.getResponse().trim());
 Assert.assertTrue(response instanceof JSONArray);
       System.out.println("Result of 'test$HTTP_Method_Name$': " + result.getResponse().trim());

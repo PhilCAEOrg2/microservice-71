@@ -71,9 +71,9 @@ public class Res extends RESTService {
 
   @Api
   @SwaggerDefinition(
-      info = @Info(title = "71", version = "$Metadata_Version$",
-          description = "$Metadata_Description$",
-          termsOfService = "$Metadata_Terms$",
+      info = @Info(title = "71", version = "",
+          description = "",
+          termsOfService = "",
           contact = @Contact(name = "", email = "CAEAddress@gmail.com") ,
           license = @License(name = "BSD",
               url = "https://github.com/PhilCAEOrg2/microservice-71/blob/master/LICENSE.txt") ) )
@@ -82,7 +82,50 @@ public class Res extends RESTService {
 
     private final Res service = (Res) Context.getCurrent().getService();
 
-    
+      /**
+   * 
+   * getTest
+   *
+   * 
+   *
+   * 
+   * @return Response 
+   * 
+   */
+  @GET
+  @Path("/test")
+  @Produces(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
+  @ApiResponses(value = {
+       @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "resp")
+  })
+  @ApiOperation(value = "getTest", notes = " ")
+  public Response getTest() {
+
+
+
+
+     
+    // service method invocations
+
+     
+
+
+
+
+    // resp
+    boolean resp_condition = true;
+    if(resp_condition) {
+      JSONObject res = new JSONObject();
+
+      
+
+      return Response.status(HttpURLConnection.HTTP_OK).entity(res.toJSONString()).build();
+    }
+    return null;
+  }
+
+
 
   }
 
